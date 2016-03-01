@@ -1,0 +1,177 @@
+﻿/****************************
+    Animated text
+****************************/
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Bree Serif', serif;
+  color: white;
+  font-weight: 100;
+}
+
+.wrapper {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.wrapper h1 {
+  font-size: 50px;
+  margin-top: 0;
+}
+.wrapper h3 {
+  margin-bottom: 0;
+}
+.wrapper span {
+  display: inline-block;
+  text-align: left;
+  font-size: 26px;
+}
+.wrapper img {
+  width: 40px;
+  margin: 80px 10px 0px 10px;
+}
+.wrapper a {
+  color: white;
+  margin: 20px;
+}
+.wrapper i {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.wrapper .social {
+  position: relative;
+  margin-top: 50px;
+}
+
+span.cursor {
+  font-size: 35px;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@media (max-width: 768px) {
+  .wrapper h1 {
+    font-size: 34px;
+  }
+  .wrapper h3 {
+    font-size: 28px;
+  }
+  .wrapper span {
+    font-size: 22px;
+  }
+  .wrapper .social {
+    text-align: center;
+  }
+  .wrapper .social i {
+    font-size: 22px;
+  }
+  .wrapper .social a {
+    margin: 5px;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*****************************
+    bouncing balls loader
+*****************************/
+
+/*html, body {
+  margin: 0;
+  padding: 0;
+}*/
+
+body {
+  background: #1156FF;
+}
+
+div#loader {
+    padding-right: 900px;
+  float: right;
+  position: relative;
+  margin-top: 5vh;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes juggler {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  12.5% {
+    transform: translateX(-20px) translateY(40px) scale(1.1);
+  }
+  25% {
+    transform: translateX(-40px) translateY(0px);
+  }
+  37.5% {
+    transform: translateX(-20px) translateY(-40px);
+  }
+  50% {
+    transform: translateX(0px) translateY(0px);
+  }
+  62.5% {
+    transform: translateX(20px) translateY(40px) scale(1.1);
+  }
+  75% {
+    transform: translateX(40px) translateY(0px);
+  }
+  87.5% {
+    transform: translateX(20px) translateY(-40px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+span.ball {
+  position: absolute;
+  background: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: juggler 1.8s linear infinite;
+}
+span.ball:nth-child(1) {
+  animation-delay: -0.6s;
+}
+span.ball:nth-child(2) {
+  animation-delay: -1.2s;
+}
+
+
